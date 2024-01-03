@@ -1,0 +1,17 @@
+#include <iostream>
+#include <stdlib.h> 
+#include <ctime>
+using namespace std;
+
+int main() {
+  string upright = "(50, 100)"; // printing coordinates first
+  string upleft = "(-50, 100)";
+  string lowleft = "(-50, -100)";
+  string lowright = "(50, -100)";
+  cout << "The four coordinates of the rectangle are:\n";
+  cout << upright << "\t" << upleft << "\t" << lowleft << "\t" << lowright << "\t \n";
+  srand((int) time(0));
+  int xcoor = (rand() % 51 - 25); // finding a random x coordinate between [-50, 50]
+  int ycoor = (rand() % 101 - 50); // finding a random y coordinate between [-100, 100]
+  cout << "A random point in the rectangle is: (" << xcoor << ", " << ycoor << ")."; // string concatentation of the ints
+}
