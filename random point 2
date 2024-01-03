@@ -1,0 +1,22 @@
+#include <iostream>
+#include <stdlib.h> 
+#include <ctime>
+using namespace std;
+
+int main() {
+  double xcoor; // x coordinate
+  double ycoor; // y coordinate
+  cout << "Enter an x coordinate: ";
+  cin >> xcoor;
+  cout << "Enter a y coordinate: ";
+  cin >> ycoor;
+  if ((xcoor >= -500) && (xcoor <= 500)) { // testing x coordinate boundaries
+    if ((ycoor >= -500) && (ycoor <= 500)) { // if x is correct, test y
+      cout << "The point ("<< xcoor << ", " << ycoor << ") is in the rectangle.";
+    } else {
+      cout << "The point is not in the rectangle.";
+    }
+  } else {
+    cout << "The point is not in the rectangle.";
+  }
+}
